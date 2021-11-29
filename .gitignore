@@ -133,3 +133,5 @@ dmypy.json
 
 # Personal files
 usefulCommands.txt
+codeSnippets/
+flaskr/static/images/
