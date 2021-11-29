@@ -1,3 +1,5 @@
+runserver.py
+__init__.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -131,3 +133,5 @@ dmypy.json
 
 # Personal files
 usefulCommands.txt
+codeSnippets/
+flaskr/static/images/
