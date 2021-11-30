@@ -2,7 +2,7 @@ const loginForm = document.getElementById("loginForm");
 const loginSubmit = document.getElementById("loginSubmit");
 const loginEmail = document.getElementById("loginEmail");
 const loginPassword = document.getElementById("loginPassword");
-const errorText = document.getElementById("errorText");
+
 // const fxn = () => {
 //   console.log("form below");
 //   console.log(loginForm);
@@ -36,10 +36,33 @@ loginSubmit.onclick = () => {
   console.log("submit button clicked");
 };
 
-loginForm.addEventListener("submit", handleForm);
+// loginForm.addEventListener("submit", handleForm);
 
-loginForm.onsubmit = (data) => {
-  console.log("formData below");
-  console.log(loginEmail.value);
-  console.log(loginPassword.value);
+loginForm.onsubmit = () => {
+  // console.log("formData below");
+  // console.log(loginEmail.value);
+  // console.log(loginPassword.value);
+
+  // come to find out that this is not best practice and there are safer ways to handle logins
+  $.ajax({
+    type: "GET",
+    url: "/login",
+    data: {
+      email: loginEmail.value,
+      password: loginPassword.value,
+    },
+    success: (data) => {
+      console.log("success");
+      // console.log(data);
+    },
+    error: (error) => {
+      console.log("success");
+      // console.log(error);
+    },
+  });
+
+  // make an ajax call with route to flask
+  // route will check if user exists
+
+  // if not we will prevent default behavior
 };
