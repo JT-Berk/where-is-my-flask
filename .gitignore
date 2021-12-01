@@ -137,3 +137,4 @@ codeSnippets/
 flaskr/static/images/
 jquery.js
 .env
+venv_cmmds.txt
