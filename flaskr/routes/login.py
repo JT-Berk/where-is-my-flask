@@ -27,6 +27,13 @@ def login():
             result = coll.find_one(query)
             print(result)
 
+            if result:
+                print("logged in")
+
+
+            else:
+                print("prompt user to make an account")
+
     except Exception as e:
         print(f"Error at login(): {e}")
 
